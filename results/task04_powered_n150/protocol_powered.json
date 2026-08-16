@@ -1,0 +1,162 @@
+{
+  "allowed_probe_failures_per_run": 0,
+  "alpha_bad": 0.2,
+  "alpha_good": 0.1,
+  "cutoff_table": {
+    "alpha_bad": 0.2,
+    "alpha_good": 0.1,
+    "confidence": 0.99,
+    "n": 150,
+    "overlap_counts": [],
+    "regions_overlap": false,
+    "reliable_max_failures": 18,
+    "unreliable_min_failures": 25
+  },
+  "decoder_identity_declared": {
+    "interface": "one fresh rung-blind Claude Code workflow subagent per instance; prompt passed verbatim in the byte-identical Smoke-v1 wrapper; answers returned via schema-enforced structured output",
+    "name": "claude-fable-5",
+    "provider": "anthropic",
+    "reasoning_effort": "low",
+    "sealing": "A_DECODER_SEALED: ASSUMED_UNVERIFIED -- instances are instructed, not mechanically deprived, of external channels; recorded zero tool use is control evidence, not effect evidence",
+    "tokenizer_if_used": null,
+    "version_or_snapshot": "session-configured claude-fable-5"
+  },
+  "distortion_support": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "empirical_questions": {
+    "contamination": "W1/W0 vs W2 -- does adding coherent superseded evidence degrade reconstruction (non-monotonic epistemic-window effect)?",
+    "invalid_world_reconstruction": "W4 -- frequency of confident reconstruction of the obsolete world vs abstention",
+    "sufficiency": "W3 vs W2 -- is the supersession statement inside policy_v4 enough, or is the version manifest load-bearing?"
+  },
+  "experiment_family": "CET0-REALTASK-004-POWERED",
+  "false_cert_at_alpha_bad": 0.00689,
+  "familywise_error_budget": 0.05,
+  "frozen": true,
+  "indifference_region": [
+    0.1,
+    0.2
+  ],
+  "justified_by": "Task04 Smoke v1, record 805adc1be2d59585 (preserved; not part of this family)",
+  "ladder_rungs": [
+    {
+      "file_hashes": {
+        "task.md": "ac5ec10611401990d91c63753290e7bb710964c69539e80829247f63a889b41e",
+        "world/historical/contractor_exception_2025.md": "c391320f4bf65e451a7a02223697fc475ec92d1163ae7f16a8fe84e0278c5e1f",
+        "world/historical/policy_v3.md": "01988de09473da6870ce4f27705bc83ab5abdd01c05458544ed64fcc773e6de6"
+      },
+      "ladder_file": "window_ladder.json",
+      "probe_set_hash": "1e9a175879332317330066921cc3ae9f03fe78693a500d14a0b30cfb6bf736d7",
+      "prompt_hash": "828c20ff4eed6bb3c4b32d70394619fd8ee3a634b5d6053ea639dd623d19e6c8",
+      "rate_bytes": 541,
+      "rung": "W4",
+      "schema_version": 2,
+      "task_id": "task_04_policy_validity",
+      "window_hash": "527bf6d609a8f34a2c268e52aac5eb59b204ec8fed81b7ffd03c63575adb18ae"
+    },
+    {
+      "file_hashes": {
+        "task.md": "ac5ec10611401990d91c63753290e7bb710964c69539e80829247f63a889b41e",
+        "world/current/policy_v4.md": "b275e552a1024cc69a45bc25f7762c7f13cc10a4875a87c67350c484ede83ac0",
+        "world/current/security_standard.md": "6137282b88bb862cbd154d276c7659b7179927cd37a7909bde72ac9afba20966"
+      },
+      "ladder_file": "window_ladder.json",
+      "probe_set_hash": "1e9a175879332317330066921cc3ae9f03fe78693a500d14a0b30cfb6bf736d7",
+      "prompt_hash": "34821bebf13b72f3c5b4a8a3d19c04fed53a757ce0886ad2f3e3be69bdf7e4ca",
+      "rate_bytes": 871,
+      "rung": "W3",
+      "schema_version": 2,
+      "task_id": "task_04_policy_validity",
+      "window_hash": "bb546a3323f40a9660d403d53f3d2b7663c0acbf7027ac7f03c84ec796b24ef2"
+    },
+    {
+      "file_hashes": {
+        "task.md": "ac5ec10611401990d91c63753290e7bb710964c69539e80829247f63a889b41e",
+        "world/current/policy_v4.md": "b275e552a1024cc69a45bc25f7762c7f13cc10a4875a87c67350c484ede83ac0",
+        "world/current/security_standard.md": "6137282b88bb862cbd154d276c7659b7179927cd37a7909bde72ac9afba20966",
+        "world/current/version_manifest.json": "f108f29f8898e4005cc797f3b8f5912e6dac6b56db16283db8a162da8416b84d"
+      },
+      "ladder_file": "window_ladder.json",
+      "probe_set_hash": "1e9a175879332317330066921cc3ae9f03fe78693a500d14a0b30cfb6bf736d7",
+      "prompt_hash": "231fa20720f5d6e0ad1783d3851fd64245d9f80126e02e80347399929bf64368",
+      "rate_bytes": 1009,
+      "rung": "W2",
+      "schema_version": 2,
+      "task_id": "task_04_policy_validity",
+      "window_hash": "8245ca9ce3fc85fad2c8a0eb2adb3fa6268e73cbad1aa9e3e037a1148c2cdbc4"
+    },
+    {
+      "file_hashes": {
+        "task.md": "ac5ec10611401990d91c63753290e7bb710964c69539e80829247f63a889b41e",
+        "world/current/policy_v4.md": "b275e552a1024cc69a45bc25f7762c7f13cc10a4875a87c67350c484ede83ac0",
+        "world/current/security_standard.md": "6137282b88bb862cbd154d276c7659b7179927cd37a7909bde72ac9afba20966",
+        "world/current/version_manifest.json": "f108f29f8898e4005cc797f3b8f5912e6dac6b56db16283db8a162da8416b84d",
+        "world/historical/contractor_exception_2025.md": "c391320f4bf65e451a7a02223697fc475ec92d1163ae7f16a8fe84e0278c5e1f",
+        "world/historical/policy_v3.md": "01988de09473da6870ce4f27705bc83ab5abdd01c05458544ed64fcc773e6de6"
+      },
+      "ladder_file": "window_ladder.json",
+      "probe_set_hash": "1e9a175879332317330066921cc3ae9f03fe78693a500d14a0b30cfb6bf736d7",
+      "prompt_hash": "f0e0fe2f05fcbbd740bdd5ad8e1dd66f1bcf5fb7dc8ff92022887fb9e5a4c108",
+      "rate_bytes": 1299,
+      "rung": "W1",
+      "schema_version": 2,
+      "task_id": "task_04_policy_validity",
+      "window_hash": "eb34ffff08bba9b9342451f30651bdf6debe78e378774eb6da483d3aa992b1c0"
+    },
+    {
+      "file_hashes": {
+        "task.md": "ac5ec10611401990d91c63753290e7bb710964c69539e80829247f63a889b41e",
+        "world/current/policy_v4.md": "b275e552a1024cc69a45bc25f7762c7f13cc10a4875a87c67350c484ede83ac0",
+        "world/current/security_standard.md": "6137282b88bb862cbd154d276c7659b7179927cd37a7909bde72ac9afba20966",
+        "world/current/version_manifest.json": "f108f29f8898e4005cc797f3b8f5912e6dac6b56db16283db8a162da8416b84d",
+        "world/historical/contractor_exception_2025.md": "c391320f4bf65e451a7a02223697fc475ec92d1163ae7f16a8fe84e0278c5e1f",
+        "world/historical/old_decision.md": "98c17061820268f1ec38de698e0446f2363770d25abe7bcc1c603e85fb692f94",
+        "world/historical/policy_v3.md": "01988de09473da6870ce4f27705bc83ab5abdd01c05458544ed64fcc773e6de6"
+      },
+      "ladder_file": "window_ladder.json",
+      "probe_set_hash": "1e9a175879332317330066921cc3ae9f03fe78693a500d14a0b30cfb6bf736d7",
+      "prompt_hash": "e49093d391277654bbe568b063ee3ae4a788418b478baa326424b16b2487f9ff",
+      "rate_bytes": 1373,
+      "rung": "W0",
+      "schema_version": 2,
+      "task_id": "task_04_policy_validity",
+      "window_hash": "e3eb87e21c7e2e4ba4975934719ae5a7061d07fbd796d3316832f499d9647a8a"
+    }
+  ],
+  "limitations": [
+    "no operating-characteristic guarantee inside the indifference region",
+    "decoder/model-relative: scoped to the declared decoder identity; curves do not merge across models or configurations",
+    "basis grading is a token-level proxy for cited grounding; it cannot verify reasoning, and a decoder that name-drops v4 while reasoning from v3 would pass it",
+    "a RELIABLE verdict means the failure count fell in the preregistered acceptance region, not P(p<=alpha_good|data)"
+  ],
+  "measurement_program": {
+    "builder_sha256": "a2c365574eef11e129192a9b1611cf96666a71de0e0d987b636426ed80e33e0a",
+    "cross_check": "in-flight JS grading must agree exactly with grade_task04_v2.py re-applied to the raw answers in the workflow journal; disagreement voids the run",
+    "prompt_generator_sha256": "e67565a028ed10425014e898e239c9ebb45cff09b39c7638e153db0cd59a7e07",
+    "reference_grader_sha256": "7a791858abcbcf0b6132adcb974535cb455beec2261d6550f858d6758c7c363c",
+    "workflow_script": "workflow_task04_powered.js",
+    "workflow_script_sha256": "dc80e73e12102b5cb4a69b9e7bfe5faa7ccd1eb84101651bb0e070aa65fa739c"
+  },
+  "multiple_comparison_rule": "Bonferroni over L=5 rungs",
+  "n_min_adequate": 150,
+  "n_per_rung": 150,
+  "pack_hash": "fd266ee246d839e6e328332e755c1531dd4e0a8796315db79c76bb1774579d68",
+  "per_rung_confidence": 0.99,
+  "power_at_alpha_good": 0.83084,
+  "probe_count": 5,
+  "probe_set_id": "policy_q1_v2_outcome_basis",
+  "probes_v2_hash": "3d64f97c0ae1a224c285136bb319bb3d76140c05be88b45d1befcb4559bbb012",
+  "protocol_hash": "8a8598bd272982eb260920d1e1124ee93afca446b9dea891d29c8f31cd5e8c78",
+  "protocol_version": 1,
+  "run_failure_condition": "Y_j = 1[any preregistered probe fails]",
+  "rung_order": "rate-ascending (W4,W3,W2,W1,W0); decision arm stops at first RELIABLE; every rung measured descriptively",
+  "scoring": "probe pass iff outcome_correct AND basis_correct; see probes_v2.json for the declared mechanical rules",
+  "substrate_hash": "c871cc8e2994639c144aa0a31b91dfb08c44778d3f6f0ae14fcfcceb0e47452a",
+  "target_power": 0.8,
+  "task_id": "task_04_policy_validity"
+}

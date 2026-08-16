@@ -1,0 +1,45 @@
+{
+  "probe_set_id": "policy_q1_v2_outcome_basis",
+  "derived_from": "policy_q1",
+  "motivation": "Task04 Smoke v1 (record 805adc1be2d59585) found a correct outcome carried by a wrong epistemic basis: W4's Q4 answered 'No' because policy v3 already permits 30 days, not because v4 supersedes the exception. Surface correctness != reconstruction correctness, so each probe now carries an outcome AND a required basis.",
+  "scoring_rule": "probe passes iff outcome_correct AND basis_correct; run-level failure Y_j = 1[any preregistered probe fails]; allowed_probe_failures_per_run = 0",
+  "basis_semantics": "basis_correct iff any required_basis_token appears as a case-insensitive substring of the decoder's stated basis for that probe. Token tests verify CITED grounding, not reasoning; they are a declared mechanical proxy, conservative in the direction that matters here: an answer grounded solely in the superseded v3/2025-exception world contains no v4/supersession token and fails.",
+  "probes": [
+    {
+      "id": "Q1",
+      "expected_outcome": false,
+      "required_basis_tokens": ["v4"],
+      "required_mode": "any",
+      "rationale": "'No' must be grounded in policy v4's 14-day contractor cap; the stale world answers 'Yes', so an outcome collision is unlikely but the basis requirement makes the grounding explicit"
+    },
+    {
+      "id": "Q2",
+      "expected_outcome": ["sponsoring director", "Security"],
+      "required_basis_tokens": ["v4"],
+      "required_mode": "any",
+      "rationale": "sponsoring-director approval exists only in v4; basis must cite it"
+    },
+    {
+      "id": "Q3",
+      "expected_outcome": 14,
+      "required_basis_tokens": ["v4"],
+      "required_mode": "any",
+      "rationale": "the 14-day maximum exists only in v4"
+    },
+    {
+      "id": "Q4",
+      "expected_outcome": false,
+      "required_basis_tokens": ["v4", "supersed"],
+      "required_mode": "any",
+      "rationale": "THE collision probe: both worlds yield 'No'. The correct basis is v4's supersession of pre-2026-07-01 exception memos; 'v3 already permits 30 days' is a wrong causal structure that produces the same surface answer. 'supersed' matches supersede/supersedes/superseded/supersession.",
+      "known_wrong_basis_example": "policy v3 already permits 30 days, so the exception is not needed"
+    },
+    {
+      "id": "Q5",
+      "expected_outcome": "policy_v4.md",
+      "required_basis_tokens": ["v4"],
+      "required_mode": "any",
+      "rationale": "authority must be grounded in v4's own precedence clause or the version manifest"
+    }
+  ]
+}
