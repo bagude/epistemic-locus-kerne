@@ -1,0 +1,39 @@
+{
+  "W0": [
+    "task.md",
+    "world/contracts.csv",
+    "world/usage_august.csv",
+    "world/invoices_august.csv",
+    "world/credits_august.csv",
+    "world/customer_status.csv",
+    "world/import_control.log",
+    "world/noise/july_summary.md"
+  ],
+  "W1": [
+    "task.md",
+    "world/contracts.csv",
+    "world/usage_august.csv",
+    "world/invoices_august.csv",
+    "world/credits_august.csv",
+    "world/customer_status.csv",
+    "world/import_control.log"
+  ],
+  "W2": [
+    "task.md",
+    "world/contracts.csv",
+    "world/usage_august.csv",
+    "world/invoices_august.csv",
+    "world/import_control.log"
+  ],
+  "W3": [
+    "task.md",
+    "world/contracts.csv",
+    "world/usage_august.csv",
+    "world/invoices_august.csv"
+  ],
+  "W4": [
+    "task.md",
+    "world/usage_august.csv",
+    "world/invoices_august.csv"
+  ]
+}

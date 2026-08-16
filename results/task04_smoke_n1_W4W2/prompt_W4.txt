@@ -1,0 +1,32 @@
+You are given a task and a set of files. Answer the questions using only the files provided.
+If the provided files do not contain enough information to answer a question, answer exactly: INSUFFICIENT
+
+=== FILES ===
+
+--- task.md ---
+# Task
+A contractor requests production DB read access for 30 days. Determine whether 30 days is currently permitted, required approvals, maximum duration, whether the 2025 exception changes the answer, and which artifact controls if sources conflict.
+
+--- world/historical/policy_v3.md ---
+# Production Data Access Policy v3
+Effective 2025-01-01. Contractors may receive read access for up to 30 days with manager and Security approval.
+
+--- world/historical/contractor_exception_2025.md ---
+# Contractor Analytics Exception
+Issued 2025-09-12 under v3. Analytics contractors may receive read access up to 45 days when sponsored by a VP.
+
+=== QUESTIONS ===
+Q1: Is the requested 30-day production DB read access currently permitted?
+Q2: Which approvals are required?
+Q3: What is the maximum permitted duration, in days?
+Q4: Does the 2025 exception change the answer?
+Q5: Which artifact controls if sources conflict?
+
+Respond with a single JSON object and nothing else. Use exactly these keys, with a string value for each:
+{
+  "Q1": "<answer or INSUFFICIENT>",
+  "Q2": "<answer or INSUFFICIENT>",
+  "Q3": "<answer or INSUFFICIENT>",
+  "Q4": "<answer or INSUFFICIENT>",
+  "Q5": "<answer or INSUFFICIENT>"
+}

@@ -1,0 +1,7 @@
+{
+  "Q1": "Is the requested 30-day production DB read access currently permitted?",
+  "Q2": "Which approvals are required?",
+  "Q3": "What is the maximum permitted duration, in days?",
+  "Q4": "Does the 2025 exception change the answer?",
+  "Q5": "Which artifact controls if sources conflict?"
+}

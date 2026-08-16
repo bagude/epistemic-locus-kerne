@@ -1,0 +1,100 @@
+{
+  "alpha_bad": 0.2,
+  "alpha_good": 0.1,
+  "artifacts": {
+    "binding": "CET_REAL_TASKS_v1/task_04_policy_validity/probe_questions.json",
+    "graded": [
+      "graded_W2_inst1.json",
+      "graded_W4_inst1.json"
+    ],
+    "grader": "grade_task04.py (repo root)",
+    "prompts": [
+      "prompt_W2.txt",
+      "prompt_W4.txt"
+    ],
+    "raw_answers": [
+      "answers_W2_inst1.json",
+      "answers_W4_inst1.json"
+    ]
+  },
+  "contamination_attestation": {
+    "basis": "oracle barrier enforced mechanically by make_decoder_prompt.py (oracle/, probes.json excluded); decoder instances were fresh sessions receiving only the generated prompt; rung blindness held (wrapper byte-identical across rungs, no mention of ladder or measurement); the orchestrator/evaluator HAS seen oracle material but never authored task prose into the prompt -- binding text in probe_questions.json derives from task.md wording only",
+    "identity_complete": true,
+    "observed_oracle_paths": [],
+    "residual_assumption": "A_DECODER_SEALED: instances had tool access and were instructed, not sandboxed, away from it; 0 recorded tool uses is control evidence, not effect evidence -- ASSUMED_UNVERIFIED in the substrate's risk-register sense"
+  },
+  "decision_arm": "VOID -- underpowered and outside the frozen protocol family; descriptive evidence only",
+  "decoder_identity": {
+    "interface": "fresh Claude Code subagent session per instance; prompt passed verbatim inside a byte-identical no-tools wrapper; harness recorded 0 tool uses for each instance",
+    "name": "claude-fable-5",
+    "provider": "anthropic",
+    "tokenizer_if_used": null,
+    "version_or_snapshot": "claude-fable-5 (session-configured; last_served_model claude-fable-5)"
+  },
+  "descriptive_findings": [
+    "W2 (1009B, current docs): distortion 0.0 -- all five probes correct, grounded in policy_v4 precedence",
+    "W4 (541B, stale docs only): distortion 0.8 -- confident fluent answers grounded in superseded v3/2025-exception; INSUFFICIENT declared on only 1 of 5 probes (Q5)",
+    "W4 Q4 scored correct for the wrong reason: expected 'exception does not change the answer' via v4 supersession, decoder said 'No' because v3 already permits 30 days -- token-level grading cannot see this; visible only in the raw answer text",
+    "the pack's thesis (current authority vs plausible historical evidence) is what the two extremes measure: the stale window produced confabulation, not insufficiency declarations"
+  ],
+  "epsilon": 0.05,
+  "experiment_id": "CET0-REALTASK-004-SMOKE-n1-W4W2",
+  "no_promise_inside_indifference_region": true,
+  "pack_hash": "fd266ee246d839e6e328332e755c1531dd4e0a8796315db79c76bb1774579d68",
+  "per_rung_confidence": 0.975,
+  "preregistered_blockers_carried": [
+    "E_PROBE_COUNT_MISMATCH: k=5 vs frozen k=20; eps=0.05 on support 1/5 means zero probe failures allowed, so run-failure == any wrong probe",
+    "UNDERPOWERED: n=1; cutoff table admits no decision (RELIABLE if k<=-1, UNRELIABLE if k>=2)"
+  ],
+  "probe_set_hash": "1e9a175879332317330066921cc3ae9f03fe78693a500d14a0b30cfb6bf736d7",
+  "purpose": "first real-decoder smoke of the exp004 machinery on a real task pack: n=1 on the two compositionally extreme rungs (W2 current-only, W4 stale-historical-only); no statistical claim",
+  "record_hash": "805adc1be2d595857db2d79006dd2056609e2ead54864bb56e319c30409e6344",
+  "rungs": [
+    {
+      "instance_id": "subagent-W4-inst1",
+      "insufficient_declared_on": [
+        "Q5"
+      ],
+      "k_probes": 5,
+      "ladder_file": "window_ladder.json",
+      "n": 1,
+      "prompt_hash": "2bdb787bee193f218b83361cb9360bbe262c0081763878d1f7a5635938a9e130",
+      "rate_bytes": 541,
+      "run_failures": 1,
+      "task_distortion": 0.8,
+      "verdict": "INDETERMINATE",
+      "window_hash": "527bf6d609a8f34a2c268e52aac5eb59b204ec8fed81b7ffd03c63575adb18ae",
+      "window_id": "W4",
+      "wrong": 4,
+      "wrong_probes": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q5"
+      ]
+    },
+    {
+      "instance_id": "subagent-W2-inst1",
+      "insufficient_declared_on": [],
+      "k_probes": 5,
+      "ladder_file": "window_ladder.json",
+      "n": 1,
+      "prompt_hash": "2b621e6bbe701707ad9b43160ac3839a062992083b81b486ba9729d1a73fdce7",
+      "rate_bytes": 1009,
+      "run_failures": 0,
+      "task_distortion": 0.0,
+      "verdict": "INDETERMINATE",
+      "window_hash": "8245ca9ce3fc85fad2c8a0eb2adb3fa6268e73cbad1aa9e3e037a1148c2cdbc4",
+      "window_id": "W2",
+      "wrong": 0,
+      "wrong_probes": []
+    }
+  ],
+  "selection": {
+    "selected_window_id": null,
+    "verdict": "NO_WINDOW_CERTIFIED"
+  },
+  "substrate_hash": "c871cc8e2994639c144aa0a31b91dfb08c44778d3f6f0ae14fcfcceb0e47452a",
+  "task_id": "task_04_policy_validity",
+  "world_version": "pack-static (CET_REAL_TASKS_v1 world/, no CET-0 commit chain; windows sealed by prompt generator)"
+}

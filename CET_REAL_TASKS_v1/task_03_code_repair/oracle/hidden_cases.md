@@ -1,0 +1,1 @@
+Evaluator hidden cases: three-invoice unsorted chain; zero payment; exact payoff; duplicated due dates with stable outcome requirements.

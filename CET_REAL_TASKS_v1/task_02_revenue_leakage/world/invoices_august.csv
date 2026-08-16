@@ -1,0 +1,5 @@
+invoice_id,customer_id,units_billed,amount,status
+I1001,C100,1000,12000,posted
+I1002,C200,1200,12000,posted
+I1003,C300,400,5000,posted
+I1004,C400,700,10500,posted

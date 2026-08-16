@@ -1,0 +1,5 @@
+customer_id,billing_hold,notes
+C100,false,
+C200,false,"meter import split across two files after source migration"
+C300,false,
+C400,false,

@@ -1,0 +1,31 @@
+[
+  {
+    "file_hashes": {
+      "task.md": "ac5ec10611401990d91c63753290e7bb710964c69539e80829247f63a889b41e",
+      "world/current/policy_v4.md": "b275e552a1024cc69a45bc25f7762c7f13cc10a4875a87c67350c484ede83ac0",
+      "world/current/security_standard.md": "6137282b88bb862cbd154d276c7659b7179927cd37a7909bde72ac9afba20966",
+      "world/current/version_manifest.json": "f108f29f8898e4005cc797f3b8f5912e6dac6b56db16283db8a162da8416b84d"
+    },
+    "ladder_file": "window_ladder.json",
+    "probe_set_hash": "1e9a175879332317330066921cc3ae9f03fe78693a500d14a0b30cfb6bf736d7",
+    "prompt_hash": "2b621e6bbe701707ad9b43160ac3839a062992083b81b486ba9729d1a73fdce7",
+    "rate_bytes": 1009,
+    "rung": "W2",
+    "task_id": "task_04_policy_validity",
+    "window_hash": "8245ca9ce3fc85fad2c8a0eb2adb3fa6268e73cbad1aa9e3e037a1148c2cdbc4"
+  },
+  {
+    "file_hashes": {
+      "task.md": "ac5ec10611401990d91c63753290e7bb710964c69539e80829247f63a889b41e",
+      "world/historical/contractor_exception_2025.md": "c391320f4bf65e451a7a02223697fc475ec92d1163ae7f16a8fe84e0278c5e1f",
+      "world/historical/policy_v3.md": "01988de09473da6870ce4f27705bc83ab5abdd01c05458544ed64fcc773e6de6"
+    },
+    "ladder_file": "window_ladder.json",
+    "probe_set_hash": "1e9a175879332317330066921cc3ae9f03fe78693a500d14a0b30cfb6bf736d7",
+    "prompt_hash": "2bdb787bee193f218b83361cb9360bbe262c0081763878d1f7a5635938a9e130",
+    "rate_bytes": 541,
+    "rung": "W4",
+    "task_id": "task_04_policy_validity",
+    "window_hash": "527bf6d609a8f34a2c268e52aac5eb59b204ec8fed81b7ffd03c63575adb18ae"
+  }
+]

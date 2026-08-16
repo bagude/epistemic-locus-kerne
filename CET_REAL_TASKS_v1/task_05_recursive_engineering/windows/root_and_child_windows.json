@@ -1,0 +1,33 @@
+{
+  "root_W0": [
+    "task.md",
+    "world/src/webhook_service.py",
+    "world/src/auth.py",
+    "world/src/store.py",
+    "world/tests/test_service.py",
+    "world/docs/requirements.md",
+    "world/ops/incident_note.md",
+    "world/ops/maintainability_note.md"
+  ],
+  "child_correctness": [
+    "task.md",
+    "world/src/webhook_service.py",
+    "world/src/store.py",
+    "world/tests/test_service.py",
+    "world/docs/requirements.md",
+    "world/ops/incident_note.md"
+  ],
+  "child_security": [
+    "task.md",
+    "world/src/webhook_service.py",
+    "world/src/auth.py",
+    "world/docs/requirements.md",
+    "world/ops/incident_note.md"
+  ],
+  "child_maintainability": [
+    "task.md",
+    "world/src/store.py",
+    "world/docs/requirements.md",
+    "world/ops/maintainability_note.md"
+  ]
+}

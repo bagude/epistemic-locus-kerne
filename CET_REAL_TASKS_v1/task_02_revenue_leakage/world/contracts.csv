@@ -1,0 +1,5 @@
+customer_id,contract_rate_per_unit,min_monthly_charge,status
+C100,12.00,0,active
+C200,10.00,0,active
+C300,8.00,5000,active
+C400,15.00,0,active

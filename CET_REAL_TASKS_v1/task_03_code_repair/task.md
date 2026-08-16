@@ -1,0 +1,2 @@
+# Task
+Repair payment allocation so payments apply oldest invoice first, partial payments work, balances never go negative, excess cash is returned, and caller invoice order does not change the result. Change only what is necessary.

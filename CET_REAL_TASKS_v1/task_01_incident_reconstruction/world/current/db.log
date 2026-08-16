@@ -1,0 +1,5 @@
+2026-08-14T18:03:18Z INFO connections_active=20 max_connections_for_app=20
+2026-08-14T18:03:24Z WARN connection_waiters=29
+2026-08-14T18:04:15Z INFO transactions_rollback=0
+2026-08-14T18:05:48Z INFO connections_active=9 max_connections_for_app=20
+2026-08-14T18:06:05Z INFO integrity_check=ok

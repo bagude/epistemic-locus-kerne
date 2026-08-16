@@ -1,0 +1,10 @@
+{
+  "correctness_defect": "duplicate event ids cause duplicate side effects",
+  "security_defect": "signature verification return value ignored",
+  "maintainability_defect": "no indexed seen-id structure; linear scan would be O(n)",
+  "minimal_remediation": [
+    "reject invalid signature before parse/store",
+    "add constant-time seen-id tracking",
+    "return idempotent success for duplicate id without repeat side effects"
+  ]
+}

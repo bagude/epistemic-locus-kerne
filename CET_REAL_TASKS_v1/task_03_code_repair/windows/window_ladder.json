@@ -1,0 +1,29 @@
+{
+  "W0": [
+    "task.md",
+    "world/src/allocation.py",
+    "world/tests/test_allocation.py",
+    "world/docs/requirements.md",
+    "world/history/deprecated_allocation.py"
+  ],
+  "W1": [
+    "task.md",
+    "world/src/allocation.py",
+    "world/tests/test_allocation.py",
+    "world/docs/requirements.md"
+  ],
+  "W2": [
+    "task.md",
+    "world/src/allocation.py",
+    "world/tests/test_allocation.py"
+  ],
+  "W3": [
+    "task.md",
+    "world/src/allocation.py",
+    "world/docs/requirements.md"
+  ],
+  "W4": [
+    "task.md",
+    "world/src/allocation.py"
+  ]
+}

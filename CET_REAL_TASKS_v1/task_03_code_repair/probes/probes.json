@@ -1,0 +1,26 @@
+{
+  "probe_set_id": "code_repair_q1",
+  "probes": [
+    {
+      "id": "Q1",
+      "type": "executable",
+      "command": "python -m unittest discover -s world/tests -v"
+    },
+    {
+      "id": "Q2",
+      "expected": "oldest-first independent of input order"
+    },
+    {
+      "id": "Q3",
+      "expected": "partial payments correct"
+    },
+    {
+      "id": "Q4",
+      "expected": "excess cash returned"
+    },
+    {
+      "id": "Q5",
+      "expected": "deprecated newest-first behavior not restored"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Task
+Review the webhook ingestion service. Identify and remediate: (1) one correctness defect, (2) one security/control defect, (3) one maintainability/reliability defect. Cite evidence, propose minimal changes, preserve intended behavior, and avoid cross-child contradictions. The root may delegate the three categories.

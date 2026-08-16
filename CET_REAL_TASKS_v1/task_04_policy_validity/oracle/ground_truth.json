@@ -1,0 +1,10 @@
+{
+  "requested_30_days_permitted": false,
+  "required_approvals": [
+    "sponsoring director",
+    "Security"
+  ],
+  "max_duration_days": 14,
+  "exception_2025_applies": false,
+  "authoritative": "policy_v4.md"
+}

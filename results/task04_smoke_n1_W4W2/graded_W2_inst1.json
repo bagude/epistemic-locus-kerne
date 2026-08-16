@@ -1,0 +1,37 @@
+{
+  "k": 5,
+  "wrong": 0,
+  "distortion": 0.0,
+  "per_probe": [
+    {
+      "probe_id": "Q1",
+      "answer": "No. Policy v4 (effective 2026-07-01) caps contractor production read access at 14 calendar days, so a 30-day grant is not permitted.",
+      "correct": true,
+      "insufficient_declared": false
+    },
+    {
+      "probe_id": "Q2",
+      "answer": "Sponsoring director approval and Security approval (plus an exact-database/business-purpose ticket).",
+      "correct": true,
+      "insufficient_declared": false
+    },
+    {
+      "probe_id": "Q3",
+      "answer": "14",
+      "correct": true,
+      "insufficient_declared": false
+    },
+    {
+      "probe_id": "Q4",
+      "answer": "No. The 2025 contractor exception was issued before 2026-07-01 and is explicitly superseded by policy v4 (also listed as superseded in the version manifest), so it has no effect.",
+      "correct": true,
+      "insufficient_declared": false
+    },
+    {
+      "probe_id": "Q5",
+      "answer": "The current policy (policy_v4.md) controls; per its precedence order it is followed by the current security standard and then current exceptions explicitly issued under the current policy.",
+      "correct": true,
+      "insufficient_declared": false
+    }
+  ]
+}

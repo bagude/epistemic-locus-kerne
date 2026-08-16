@@ -1,0 +1,37 @@
+{
+  "probe_set_id": "recursive_eng_q1",
+  "probes": [
+    {
+      "id": "Q1",
+      "expected": "duplicate event ids cause duplicate side effects"
+    },
+    {
+      "id": "Q2",
+      "expected": "signature verification result ignored"
+    },
+    {
+      "id": "Q3",
+      "expected": "indexed seen-id structure required"
+    },
+    {
+      "id": "Q4",
+      "expected": "reject invalid signature before parse/store"
+    },
+    {
+      "id": "Q5",
+      "expected": "duplicate ids have at-most-once side effects"
+    },
+    {
+      "id": "Q6",
+      "expected": "no cross-child contradiction"
+    },
+    {
+      "id": "Q7",
+      "expected": "exact child/fold provenance preserved"
+    },
+    {
+      "id": "Q8",
+      "expected": "audit summary answers protected-path/effect-open/stale/merge-risk probes"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+July close had a $3,200 pricing adjustment for C400. It applied only to July.

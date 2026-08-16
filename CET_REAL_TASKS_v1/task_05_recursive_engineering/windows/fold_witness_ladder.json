@@ -1,0 +1,7 @@
+{
+  "F0": "complete child outputs + evidence excerpts + rejected alternatives + tests + lineage",
+  "F1": "structured findings + evidence + tests + lineage",
+  "F2": "findings + evidence hashes + test results + lineage",
+  "F3": "findings + evidence hashes + lineage",
+  "F4": "child conclusions only"
+}

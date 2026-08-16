@@ -1,0 +1,36 @@
+{
+  "W0": [
+    "task.md",
+    "world/current/deployments.json",
+    "world/current/app.log",
+    "world/current/db.log",
+    "world/current/incident_chat.md",
+    "world/noise/incident_2026_07_30.md",
+    "world/noise/runbook.md"
+  ],
+  "W1": [
+    "task.md",
+    "world/current/deployments.json",
+    "world/current/app.log",
+    "world/current/db.log",
+    "world/current/incident_chat.md",
+    "world/noise/runbook.md"
+  ],
+  "W2": [
+    "task.md",
+    "world/current/deployments.json",
+    "world/current/app.log",
+    "world/current/db.log",
+    "world/current/incident_chat.md"
+  ],
+  "W3": [
+    "task.md",
+    "world/current/deployments.json",
+    "world/current/app.log",
+    "world/current/db.log"
+  ],
+  "W4": [
+    "task.md",
+    "world/current/app.log"
+  ]
+}

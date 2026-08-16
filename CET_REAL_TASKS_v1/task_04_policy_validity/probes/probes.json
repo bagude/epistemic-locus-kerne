@@ -1,0 +1,28 @@
+{
+  "probe_set_id": "policy_q1",
+  "probes": [
+    {
+      "id": "Q1",
+      "expected": false
+    },
+    {
+      "id": "Q2",
+      "expected": [
+        "sponsoring director",
+        "Security"
+      ]
+    },
+    {
+      "id": "Q3",
+      "expected": 14
+    },
+    {
+      "id": "Q4",
+      "expected": false
+    },
+    {
+      "id": "Q5",
+      "expected": "policy_v4.md"
+    }
+  ]
+}

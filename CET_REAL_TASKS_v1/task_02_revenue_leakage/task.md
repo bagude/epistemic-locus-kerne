@@ -1,0 +1,2 @@
+# Task
+Finance believes August revenue is understated. Determine the customer causing the largest leakage, dollar amount, exact operational reason, whether this is duplicate billing, missing billing, or bad pricing, and the minimum corrective action. Show auditable calculations.

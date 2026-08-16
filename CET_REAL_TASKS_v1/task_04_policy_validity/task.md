@@ -1,0 +1,2 @@
+# Task
+A contractor requests production DB read access for 30 days. Determine whether 30 days is currently permitted, required approvals, maximum duration, whether the 2025 exception changes the answer, and which artifact controls if sources conflict.

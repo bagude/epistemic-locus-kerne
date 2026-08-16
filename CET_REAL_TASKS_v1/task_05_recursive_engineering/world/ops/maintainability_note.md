@@ -1,0 +1,1 @@
+EventStore has only a list of `(event_id,event)` tuples. A future duplicate check by scanning would be O(n) per webhook. Use an explicit seen-id index/set.

@@ -1,0 +1,25 @@
+{
+  "probe_set_id": "incident_q1",
+  "probes": [
+    {
+      "id": "Q1",
+      "expected": "2026-08-14T18:03:21Z"
+    },
+    {
+      "id": "Q2",
+      "expected": "worker concurrency 8 -> 32"
+    },
+    {
+      "id": "Q3",
+      "expected": "DB application pool exhausted at 20 connections, causing pool timeouts/503s"
+    },
+    {
+      "id": "Q4",
+      "expected": "reduce workers to 8"
+    },
+    {
+      "id": "Q5",
+      "expected": false
+    }
+  ]
+}

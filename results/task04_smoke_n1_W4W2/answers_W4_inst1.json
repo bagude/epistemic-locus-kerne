@@ -1,0 +1,7 @@
+{
+  "Q1": "Yes. Under Production Data Access Policy v3 (effective 2025-01-01), contractors may receive production read access for up to 30 days, so a 30-day request is permitted.",
+  "Q2": "Manager approval and Security approval (VP sponsorship is only required for the analytics exception's 45-day access).",
+  "Q3": "30 days under policy v3 generally; up to 45 days for analytics contractors sponsored by a VP under the 2025 exception.",
+  "Q4": "No. The 2025 exception only extends the maximum to 45 days for VP-sponsored analytics contractors; a standard 30-day request is already permitted under v3.",
+  "Q5": "INSUFFICIENT"
+}

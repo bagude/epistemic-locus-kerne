@@ -1,0 +1,1 @@
+2026-08-10: provider retried one invoice.paid event 17 times after a network timeout; service counted 17 payments. Pen test separately showed an invalidly signed payload was accepted.

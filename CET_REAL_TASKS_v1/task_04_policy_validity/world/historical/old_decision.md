@@ -1,0 +1,1 @@
+In February 2026 a contractor received 30-day read access under Policy v3.

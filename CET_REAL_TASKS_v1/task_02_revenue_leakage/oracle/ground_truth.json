@@ -1,0 +1,11 @@
+{
+  "customer_id": "C200",
+  "expected_units": 2000,
+  "billed_units": 1200,
+  "missing_units": 800,
+  "rate": 10.0,
+  "leakage": 8000.0,
+  "classification": "missing billing",
+  "reason": "usage_part_b.csv skipped; 800 C200 units omitted",
+  "corrective_action": "bill 800 units at $10 and repair/reprocess import"
+}

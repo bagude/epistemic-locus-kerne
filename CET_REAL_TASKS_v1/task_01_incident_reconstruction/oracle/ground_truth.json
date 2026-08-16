@@ -1,0 +1,7 @@
+{
+  "first_failure": "2026-08-14T18:03:21Z",
+  "trigger": "worker concurrency 8 -> 32",
+  "mechanism": "DB pool exhaustion at 20 active connections causing timeouts and 503s",
+  "mitigation": "workers back to 8",
+  "db_corruption": false
+}

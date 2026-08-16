@@ -1,0 +1,25 @@
+{
+  "probe_set_id": "revenue_q1",
+  "probes": [
+    {
+      "id": "Q1",
+      "expected": "C200"
+    },
+    {
+      "id": "Q2",
+      "expected": 8000.0
+    },
+    {
+      "id": "Q3",
+      "expected": "missing billing"
+    },
+    {
+      "id": "Q4",
+      "expected": "skipped 800 units due to usage_part_b duplicate-header rejection"
+    },
+    {
+      "id": "Q5",
+      "expected": "bill missing 800 units and repair/reprocess import"
+    }
+  ]
+}

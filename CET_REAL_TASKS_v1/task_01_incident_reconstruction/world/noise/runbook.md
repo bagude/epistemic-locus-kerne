@@ -1,0 +1,1 @@
+General outage runbook: inspect recent changes, DB saturation, caches, and recovery. Procedure only; not incident-specific evidence.

@@ -1,0 +1,35 @@
+{
+  "W0": [
+    "task.md",
+    "world/current/policy_v4.md",
+    "world/current/security_standard.md",
+    "world/current/version_manifest.json",
+    "world/historical/policy_v3.md",
+    "world/historical/contractor_exception_2025.md",
+    "world/historical/old_decision.md"
+  ],
+  "W1": [
+    "task.md",
+    "world/current/policy_v4.md",
+    "world/current/security_standard.md",
+    "world/current/version_manifest.json",
+    "world/historical/policy_v3.md",
+    "world/historical/contractor_exception_2025.md"
+  ],
+  "W2": [
+    "task.md",
+    "world/current/policy_v4.md",
+    "world/current/security_standard.md",
+    "world/current/version_manifest.json"
+  ],
+  "W3": [
+    "task.md",
+    "world/current/policy_v4.md",
+    "world/current/security_standard.md"
+  ],
+  "W4": [
+    "task.md",
+    "world/historical/policy_v3.md",
+    "world/historical/contractor_exception_2025.md"
+  ]
+}
