@@ -1,0 +1,40 @@
+{
+  "instances_completed": 77,
+  "instances_planned": 750,
+  "instances_started": 79,
+  "notes": [
+    "the Smoke-v1 Q4 phenomenon replicated at scale: 71/77 (92%) produced the correct 'No' grounded in the obsolete world; outcome-only grading would have scored all 71 as correct",
+    "every instance declared INSUFFICIENT on Q5 (controlling artifact), yet 72% still answered Q1 confidently from the stale policy -- abstention is probe-local, not world-level",
+    "dominance note: with 77 failures already observed and the frozen table UNRELIABLE at k>=25, ANY completion of this run would have classified W4 UNRELIABLE; stated as arithmetic over the aborted record, not as a certified verdict",
+    "raw answers preserved verbatim in journal.jsonl; graded with grade_task04_v2.py (reference grader, preregistered)"
+  ],
+  "partial_W4_descriptives": {
+    "basis_cites_v3_or_historical": 75,
+    "distortion_histogram": {
+      "1.0": 77
+    },
+    "full_abstention_instances": 6,
+    "insufficient_by_probe": {
+      "Q1": 22,
+      "Q2": 21,
+      "Q3": 21,
+      "Q4": 6,
+      "Q5": 77
+    },
+    "n": 77,
+    "outcome_failures_by_probe": {
+      "Q1": 77,
+      "Q2": 77,
+      "Q3": 77,
+      "Q4": 6,
+      "Q5": 77
+    },
+    "q4_correct_outcome_wrong_basis": 71,
+    "run_failures_outcome_plus_basis": 77
+  },
+  "protocol_hash": "8a8598bd272982eb260920d1e1124ee93afca446b9dea891d29c8f31cd5e8c78",
+  "rung_attribution": "all 77 completed instances are W4 (content test: no instance mentions v4 anywhere; every non-W4 window contains policy_v4/manifest text)",
+  "status": "ABORTED_BY_USER before completion; decision arm void for all rungs",
+  "summary_hash": "692e55d4d64a6ef7f10a8876b3c961bd1be774d5c73bcf335d9ae43af5bc49b1",
+  "workflow_run_id": "wf_112e0636-312"
+}
