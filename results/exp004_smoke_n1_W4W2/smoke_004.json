@@ -1,0 +1,76 @@
+{
+  "decision_arm": "VOID -- underpowered by preregistered power analysis; no verdict at n=1 can be anything but INDETERMINATE",
+  "design_verdict": "UNDERPOWERED",
+  "deviations_from_frozen_v4": [
+    "n_per_rung 200 -> 1",
+    "ladder [W0..W5] -> [W2, W4]"
+  ],
+  "experiment_id": "CET0-004-SMOKE-n1-W4W2",
+  "frozen_v4_protocol_hash": "5f669c335bc9f88dffe43d84a868c270e4150ef778be144751aae1a559b961e7",
+  "limitations": [
+    "no operating-characteristic guarantee inside the indifference region",
+    "decoder/model-relative: scoped to (M_v, R_spec), curves do not merge across model versions",
+    "probe-relative: distortion is defined only on the preregistered probe set",
+    "a RELIABLE verdict is not P(p <= alpha_good | data); it means the count fell in the preregistered acceptance region of a procedure calibrated at the declared boundaries",
+    "smoke run: descriptive evidence about the machinery only, not about any window's adequacy"
+  ],
+  "min_adequate_n": 120,
+  "model_identity": {
+    "name": "SyntheticDecoder",
+    "note": "NOT A MODEL -- calibrated stand-in",
+    "provider": "synthetic",
+    "tokenizer_if_used": null,
+    "version_or_snapshot": "v2"
+  },
+  "no_promise_inside_indifference_region": true,
+  "probe_set_hash": "5c1369514d6f6aa3accaaf8980330c8db11bb47445ffa1b653920d604d81b8d1",
+  "purpose": "end-to-end smoke of the exp004 machinery at n=1 on the two rungs bracketing the adequacy boundary; no statistical claim",
+  "record_hash": "fc724f0f8311f144ae53d53e8d9b9f76b43552ba8ad5b6b194bd77e7ad98b137",
+  "rungs": [
+    {
+      "exact_false_cert_bound": 0,
+      "failures": 1,
+      "instances": [
+        {
+          "failed_probes": [
+            "T-05",
+            "T-10",
+            "T-20"
+          ],
+          "instance_id": "e06934ffa09fac04b57f8a5570720c6f32c2fbc3d9120472a3193d0128fdced9",
+          "wrong": 3
+        }
+      ],
+      "n": 1,
+      "probe_deps_in_window": "4/5",
+      "rate_bytes": 4960,
+      "verdict": "INDETERMINATE",
+      "window_hash": "41df80198b680a47da0a90a4fb49e344b3c1fb6c1f07a718e3367216af1ab2f2",
+      "window_id": "W4"
+    },
+    {
+      "exact_false_cert_bound": 0,
+      "failures": 0,
+      "instances": [
+        {
+          "failed_probes": [],
+          "instance_id": "0f6b00061f0c56d6d095335756f905241ee2fa336d0f70449d2c78af52f0e7ca",
+          "wrong": 0
+        }
+      ],
+      "n": 1,
+      "probe_deps_in_window": "5/5",
+      "rate_bytes": 7400,
+      "verdict": "INDETERMINATE",
+      "window_hash": "235a6be664084e60b13c1286fe0c2fdec7d58408c5931fec144e067892d6b0ad",
+      "window_id": "W2"
+    }
+  ],
+  "selection": {
+    "selected_window_id": null,
+    "verdict": "NO_WINDOW_CERTIFIED"
+  },
+  "smoke_protocol_hash": "84f25b43dd2be830a7faf77f72743cc756a4ce3226ad5bd68cd7903b97a11fba",
+  "substrate_hash": "c871cc8e2994639c144aa0a31b91dfb08c44778d3f6f0ae14fcfcceb0e47452a",
+  "world_version": 2
+}

@@ -1,0 +1,62 @@
+{
+  "alpha_bad": 0.2,
+  "alpha_good": 0.1,
+  "confidence_level": 0.95,
+  "cutoff_table": {
+    "alpha_bad": 0.2,
+    "alpha_good": 0.1,
+    "confidence": 0.975,
+    "n": 1,
+    "overlap_counts": [],
+    "regions_overlap": false,
+    "reliable_max_failures": -1,
+    "unreliable_min_failures": 2
+  },
+  "epsilon": 0.05,
+  "epsilon_meaning": "more than 1 probe failure(s)",
+  "false_cert_at_alpha_bad": 0,
+  "familywise_error_budget": 0.05,
+  "frozen": true,
+  "indifference_region": [
+    0.1,
+    0.2
+  ],
+  "ladder": [
+    [
+      "W2",
+      [
+        "spec/req_auth.txt",
+        "spec/req_audit.txt",
+        "spec/req_retention.txt",
+        "spec/req_export.txt",
+        "notes/edge_cases.txt",
+        "notes/history.txt"
+      ]
+    ],
+    [
+      "W4",
+      [
+        "spec/req_auth.txt",
+        "spec/req_audit.txt",
+        "spec/req_retention.txt",
+        "spec/req_export.txt"
+      ]
+    ]
+  ],
+  "limitations": [
+    "no operating-characteristic guarantee inside the indifference region",
+    "decoder/model-relative: scoped to (M_v, R_spec), curves do not merge across model versions",
+    "probe-relative: distortion is defined only on the preregistered probe set",
+    "a RELIABLE verdict is not P(p <= alpha_good | data); it means the count fell in the preregistered acceptance region of a procedure calibrated at the declared boundaries"
+  ],
+  "multiple_comparison_rule": "Bonferroni over L=2 rungs",
+  "n_per_rung": 1,
+  "per_rung_confidence": 0.975,
+  "power_at_alpha_good": 0,
+  "probe_count": 20,
+  "probe_set_hash": "5c1369514d6f6aa3accaaf8980330c8db11bb47445ffa1b653920d604d81b8d1",
+  "protocol_hash": "84f25b43dd2be830a7faf77f72743cc756a4ce3226ad5bd68cd7903b97a11fba",
+  "protocol_version": 4,
+  "rung_order": "smallest window first; stop at the first RELIABLE",
+  "target_power": 0.8
+}

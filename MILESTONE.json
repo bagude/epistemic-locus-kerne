@@ -1,0 +1,36 @@
+{
+  "change_from_v1": "certificate now carries substrate_hash, completing the provenance chain substrate -> decoder -> run -> descriptive ladder -> decision certificate. No preregistered parameter changed; the decision path is unchanged. Made before any real measurement existed, so no measurement is invalidated.",
+  "evidential_state": {
+    "NOT established": [
+      "that real LLM reconstruction exhibits a useful rate-distortion frontier -- no real decoder has been run",
+      "that the identity conjecture holds outside the declared claim set",
+      "that precedence errors are generally impossible; the final classifier has no overlap only under this parameterization, and an earlier one at conf=0.95 did overlap and hid a bug"
+    ],
+    "established": [
+      "the causal architecture preserves the identities and distinctions required to interpret an experiment (adversarial suite, 46 checks)",
+      "the statistical protocol behaves per its declared operating characteristics under a known synthetic process (experiment 003)"
+    ]
+  },
+  "files": {
+    "README.md": "bd1e784cd0fb57f7af9bf40f31af485febcc46911e34e5cbf0c5e326dc21d5cd",
+    "adversarial.py": "b5cf5549584f48cc1e7f0fb22cfa464447080fa986287d8213fb9b697ac544b3",
+    "audit_topology.py": "303de1511ed0f80aaa7aa8e494950ae266bae90dfc3e24d2a43b97442abaeb7e",
+    "experiment_002_window_rd.py": "3b15f2db0c5ce38fcb5810e05632191d8fa618430dc8de5acbd84fc864c057f0",
+    "experiment_003_protocol_calibration.py": "70aa01564387a5b725f8a0c2ada32a22df1e5596d9fa01714c850cab385a32ab",
+    "experiment_004_frontier.py": "fa5d5e178d4de4ee3352cb39c2c5bdd26f8c1eca0fdbedd6b5c886f962d45a4e",
+    "harness/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "harness/core.py": "79b2c71b2bcc48c7157c3eaecbc73c044f8b31fa7f702803fe479877539c5b7c",
+    "harness/probes.py": "58f3fe435365ee82d796f83039793b57c8135a5479b787e77c7f31625d8e2309",
+    "harness/reliability.py": "d076412b62d12e0934727486588893976b74d5453066370c54a66ea2fca64dfc",
+    "run_experiment.py": "1706543733a949197f498d559e8b2944961e95451820f6c6d951706335c34079"
+  },
+  "milestone": "CET-0 Experimental Substrate v1.1",
+  "missing": [],
+  "mutable_before_experiment_004": [
+    "the decoder adapter passed to experiment_004.main()"
+  ],
+  "substrate_hash": "c871cc8e2994639c144aa0a31b91dfb08c44778d3f6f0ae14fcfcceb0e47452a",
+  "supersedes": {
+    "v1": "e260cffb4a83fb133c290591f09c6ad3725052c6eaf0585d8f8726df45cacea9"
+  }
+}

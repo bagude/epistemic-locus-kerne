@@ -1,0 +1,13 @@
+SMOKE protocol 84f25b43dd2be830 (frozen v4 family 5f669c335bc9f88d -- distinct, as required)
+  n=1/rung, ladder ['W2', 'W4'], eps=0.05 (more than 1 probe failure(s))
+  n=1 table: RELIABLE if k<=-1, UNRELIABLE if k>=2 -> no k in {0,1} can decide
+  design verdict: UNDERPOWERED (power 0.000 at alpha_good, min adequate n 120)
+  frozen entrypoint would STOP here; smoke run proceeds DESCRIPTIVELY ONLY -- decision arm is VOID
+
+rung   rate B  deps   n  fails  verdict
+W4       4960   4/5   1      1  INDETERMINATE
+W2       7400   5/5   1      0  INDETERMINATE
+
+substrate c871cc8e2994639c
+selection: NO_WINDOW_CERTIFIED (expected: n=1 cannot certify)
+smoke record fc724f0f8311 -> /home/user/epistemic-locus-kerne/cet0_exp004_smoke/probes/task/smoke_004.json

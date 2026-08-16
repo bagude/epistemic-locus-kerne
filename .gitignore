@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+cet0_store/
+cet0_exp002/
+cet0_exp004/
+prompts/
+cet0_exp004_smoke/
