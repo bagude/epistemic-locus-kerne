@@ -153,6 +153,42 @@ of the window.
   reachable only through preregistered tables; within-rung curtailment only
   where the verdict is identical under every completion of the rung.
 
+## Formal statement of the sufficiency result
+
+The substrate declared distortion decoder-relative — `D_Q(W; R_O, M_v)` —
+as an architectural requirement. Task 04 produced the empirical case for the
+model index: two decoder identities yield different adequacy boundaries over
+the same window ladder. Sufficiency is therefore never a property of a
+window alone:
+
+    Sufficient(W | M, Q, T, P)
+
+where `M` is the decoder identity (model, version, reasoning effort), `Q`
+the probe set and grading instrument, `T` the task/world relation, and `P`
+the measurement protocol. Dropping any index makes the claim unstatable —
+the certificate does not even transfer across effort settings of the same
+model.
+
+Relatedly, W4 separates three questions the architecture must keep distinct,
+because passing the first implies nothing about the other two:
+
+1. Was the claim **grounded** in W? (W4 answers: yes, fluently.)
+2. Was W **sufficient** for this decoder and task? (Decoder-relative.)
+3. Was W **causally valid** with respect to the world version governing the
+   decision? (W4's window was coherent and obsolete: grounded ≠ true.)
+
+## Repository semantics: historical vs current state
+
+`MILESTONE.json` is the *frozen CET-0 v1.1 substrate milestone*. Its
+evidential-state text ("no real decoder has been run") was true at its
+freeze date and is preserved byte-identical for provenance — `freeze.py`
+and every committed protocol record verify against it. It must not be read
+as a description of the current repository. The current evidential state
+lives in `RESEARCH_STATE.json`, a separate content-addressed object that
+supersedes the milestone's claims *as description* while leaving them
+intact *as history*. Collapsing those two is the error class this
+repository measures; the repository should not commit it about itself.
+
 ## What is and is not established
 
 **Established (for the named decoder identities, this task, this probe set):**

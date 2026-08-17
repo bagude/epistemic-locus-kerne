@@ -1,0 +1,43 @@
+{
+  "as_of_commit_context": "post POWERED-V2 certification",
+  "decoder_identities_measured": [
+    "claude-fable-5, default effort (smoke v1; aborted powered W4 partial)",
+    "claude-haiku-4-5, low effort (pilot; W4 arm)",
+    "claude-fable-5, low effort (POWERED-V2 certification)"
+  ],
+  "established": [
+    "locally grounded does not imply currently correct: stale-only windows produce coherent reconstruction of the superseded world (W4: fable 30/30 confident failures at low effort, 77/77 decision failures in the aborted arm; haiku 40/40)",
+    "correct answer does not imply correct epistemic basis: Q4 wrong-basis signature 71/77 (fable default), 30/30 (fable low), caught only by outcome-plus-basis grading",
+    "the failure mode flips sign within one decoder: confident confabulation under stale-only evidence vs abstention under missing referential metadata (haiku ladder, probes_v3)",
+    "epistemic sufficiency is decoder-relative: fable certifies W3 (0/135) where haiku abstains (3/26); metadata is load-bearing per (window, decoder) pair -- Sufficient(W | M, Q, T, P), never Sufficient(W)",
+    "certified adequacy boundary exists: W3 (871 bytes) RELIABLE for claude-fable-5/low under certificate f69b038561c7ba70; W4 (541 bytes) UNRELIABLE",
+    "two instrument defects (basis-blindness; abstention collapsed into error + filename-literalism) were found by small preregistered runs before powered spend, and fixed in new families without rewriting history"
+  ],
+  "key_artifacts": {
+    "certificate": "results/task04_powered_v2/certificate_v2.json (f69b038561c7ba70)",
+    "protocols": [
+      "8a8598bd272982eb (POWERED, superseded)",
+      "f59e15826bcc7cd7 (PILOT)",
+      "589724b877e8519b (W4 arm)",
+      "af7889739375179a (POWERED-V2)"
+    ],
+    "raw_data": "every journal.jsonl under results/ -- raw decoder answers, re-gradable under future instruments",
+    "synthesis": "RESEARCH.md"
+  },
+  "not_established": [
+    "transfer of any rate or verdict to other decoder identities, tasks, probe sets, or effort settings (certificates do not even transfer across effort levels of the same model)",
+    "contamination effects below the sensitivity of n~26 per rung (W1/W0 vs W2 estimated null for haiku; unmeasured for fable -- POWERED-V2 truncated above W3 by design)",
+    "that the basis token test captures latent reasoning (it captures cited grounding only)",
+    "decoder sealing: A_DECODER_SEALED remains ASSUMED_UNVERIFIED -- zero recorded tool use is control evidence; no mechanically isolated prompt-to-generation adapter has been used",
+    "anything inside the indifference region (0.10, 0.20) of the certification protocol"
+  ],
+  "object": "RESEARCH_STATE",
+  "pack_hash": "fd266ee246d839e6",
+  "purpose": "current evidential state of this repository. MILESTONE.json is the FROZEN CET-0 v1.1 substrate milestone: its evidential_state ('no real decoder has been run') was true at its freeze date, is preserved unchanged for provenance, and is superseded AS A DESCRIPTION OF CURRENT STATE by this object. Historical state and current state are different objects; collapsing them is the error class this repository exists to measure.",
+  "research_state_hash": "bec1577377127b864cf3ca217c82fe101fad7cb10ca6d4e1c8cea3bce7dfe326",
+  "substrate": {
+    "milestone": "CET-0 Experimental Substrate v1.1",
+    "status": "frozen, verified unchanged through every experiment family",
+    "substrate_hash": "c871cc8e2994639c144aa0a31b91dfb08c44778d3f6f0ae14fcfcceb0e47452a"
+  }
+}
