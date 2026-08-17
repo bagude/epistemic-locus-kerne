@@ -1,0 +1,54 @@
+{
+  "probe_set_id": "policy_q1_v3_three_valued",
+  "derived_from": "policy_q1_v2_outcome_basis",
+  "motivation": "The n=40 pilot (summary d0d9fb23126ccfb0) found two instrument defects. (1) Q5's substring rule required the literal filename policy_v4.md and graded title-level naming of the correct authority ('Policy v4', 'current policy') as wrong -- 17 of the pilot's 20 run failures were this, not reconstruction errors. (2) Binary grading coerced INSUFFICIENT into 'wrong', erasing the distinction the ladder exists to measure: confident wrong-world reconstruction (W4 fable, 77/77) and honest abstention (W3 pilot Q4) are opposite behaviors.",
+  "outcome_values": ["CORRECT", "WRONG", "ABSTAINED"],
+  "abstained_rule": "answer begins with INSUFFICIENT (case-insensitive); an abstained probe has no basis requirement",
+  "probe_classes": {
+    "PASS": "outcome CORRECT and basis_correct",
+    "CONFIDENT_FAIL": "outcome WRONG, or outcome CORRECT with basis_correct false (confidently grounded in the wrong world)",
+    "ABSTAINED": "outcome ABSTAINED"
+  },
+  "run_level": {
+    "decision_failure": "Y_j = 1[any probe is not PASS] -- strict; a window whose decoder must abstain cannot be certified sufficient, even though abstention is honest",
+    "confident_failure": "1[any probe is CONFIDENT_FAIL] -- descriptive",
+    "abstention_run": "1[no CONFIDENT_FAIL and >=1 ABSTAINED] -- descriptive",
+    "note": "decision_failure = confident_failure OR abstention_run at the run level; the decomposition is what the binary v2 score erased"
+  },
+  "q5_normalization": "outcome CORRECT iff 'v4' appears in the answer, OR 'current policy' appears in the answer AND 'v4' appears in the basis. Title-level naming of the authority counts; naming a non-v4 artifact does not. This replaces the v2 literal-filename substring.",
+  "probes": [
+    {
+      "id": "Q1",
+      "expected_outcome": false,
+      "required_basis_tokens": ["v4"],
+      "required_mode": "any"
+    },
+    {
+      "id": "Q2",
+      "expected_outcome": ["sponsoring director", "Security"],
+      "required_basis_tokens": ["v4"],
+      "required_mode": "any"
+    },
+    {
+      "id": "Q3",
+      "expected_outcome": 14,
+      "required_basis_tokens": ["v4"],
+      "required_mode": "any"
+    },
+    {
+      "id": "Q4",
+      "expected_outcome": false,
+      "required_basis_tokens": ["v4", "supersed"],
+      "required_mode": "any",
+      "rationale": "unchanged collision probe from v2; the Smoke-v1 wrong-basis phenomenon is caught by the basis rule"
+    },
+    {
+      "id": "Q5",
+      "expected_outcome": "policy_v4.md",
+      "outcome_rule": "q5_normalization",
+      "required_basis_tokens": ["v4"],
+      "required_mode": "any"
+    }
+  ],
+  "prompt_compatibility": "graded over the v2 prompt schema (answer+basis per question) with the UNCHANGED question binding; prompts stay byte-identical to the pilot and powered families so gradings are comparable across instruments on the same raw answers"
+}

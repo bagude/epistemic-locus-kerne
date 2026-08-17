@@ -1,0 +1,42 @@
+{
+  "batch_size": 10,
+  "decoder_identity_declared": {
+    "interface": "fresh rung-blind workflow subagent per instance, byte-identical Smoke-v1 wrapper, schema-enforced output",
+    "name": "claude-haiku-4-5",
+    "provider": "anthropic",
+    "reasoning_effort": "low",
+    "sealing": "A_DECODER_SEALED: ASSUMED_UNVERIFIED",
+    "tokenizer_if_used": null,
+    "version_or_snapshot": "claude-haiku-4-5-20251001 (workflow alias 'haiku')"
+  },
+  "estimation": "exact 95% Clopper-Pearson on confident-failure, abstention and decision-failure rates; descriptive only, no verdicts",
+  "experiment_family": "CET0-REALTASK-004-PILOT-W4ARM",
+  "frozen": true,
+  "grading": {
+    "grader_v2_sha256": "7a791858abcbcf0b6132adcb974535cb455beec2261d6550f858d6758c7c363c",
+    "grader_v3_sha256": "b4d1839d1691ebd081e52b465cc7f8cf57907e2291d4cf11c79c1c4811062c6e",
+    "mode": "analysis-side only from journal raw answers; no in-flight grading exists in this workflow, so there is nothing to cross-check -- the reference graders ARE the grading",
+    "primary": "probes_v3 three-valued (grade_task04_v3.py)",
+    "probes_v3_hash": "760fac06120306b9cc0b565fbbd2185de7b6b293edf591bb3c750b10800a411b",
+    "secondary_for_comparability": "probes_v2 binary (grade_task04_v2.py)"
+  },
+  "limitations": [
+    "estimation-only",
+    "decoder-relative (haiku/low)",
+    "n=40 intervals are wide"
+  ],
+  "measurement_program": {
+    "workflow_script": "workflow_task04_w4arm.js",
+    "workflow_script_sha256": "ffeb6a3c48c115e11023184e2d7de1cb6df9e36af2316c0d910555b4cdbd8289"
+  },
+  "n": 40,
+  "pack_hash": "fd266ee246d839e6e328332e755c1531dd4e0a8796315db79c76bb1774579d68",
+  "prompt_hash": "828c20ff4eed6bb3c4b32d70394619fd8ee3a634b5d6053ea639dd623d19e6c8",
+  "prompt_note": "byte-identical to the pilot family's W4 prompt",
+  "protocol_hash": "589724b877e8519b97ecb37fcb638637f5bd09fba129859c1a5cbe76e0bb2b0e",
+  "protocol_version": 1,
+  "purpose": "complete the haiku ladder at W4 so the asymmetry finding (abstention under metadata-poor current windows vs confident wrong-world reconstruction under stale-only windows) is within-decoder; the existing over-claiming evidence is fable (archived aborted run) and cannot support a within-decoder claim",
+  "rung": "W4",
+  "substrate_hash": "c871cc8e2994639c144aa0a31b91dfb08c44778d3f6f0ae14fcfcceb0e47452a",
+  "window_hash": "527bf6d609a8f34a2c268e52aac5eb59b204ec8fed81b7ffd03c63575adb18ae"
+}

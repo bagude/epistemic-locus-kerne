@@ -1,0 +1,17 @@
+export const meta = {
+  name: 'task04-pilot-w4arm',
+  description: 'Task 04 pilot W4 arm: n=40 haiku instances on rung W4, batches of 10; raw answers only, grading analysis-side',
+  phases: [{ title: 'W4' }],
+}
+const N = 40, BATCH = 10
+const PROMPT = "You will be given a self-contained task below. Do not use any tools, do not read any files, do not run any commands \u2014 answer using only the text below. Output exactly what the task requests and nothing else.\n\nYou are given a task and a set of files. Answer the questions using only the files provided.\nIf the provided files do not contain enough information to answer a question, answer exactly: INSUFFICIENT\n\n=== FILES ===\n\n--- task.md ---\n# Task\nA contractor requests production DB read access for 30 days. Determine whether 30 days is currently permitted, required approvals, maximum duration, whether the 2025 exception changes the answer, and which artifact controls if sources conflict.\n\n--- world/historical/policy_v3.md ---\n# Production Data Access Policy v3\nEffective 2025-01-01. Contractors may receive read access for up to 30 days with manager and Security approval.\n\n--- world/historical/contractor_exception_2025.md ---\n# Contractor Analytics Exception\nIssued 2025-09-12 under v3. Analytics contractors may receive read access up to 45 days when sponsored by a VP.\n\n=== QUESTIONS ===\nQ1: Is the requested 30-day production DB read access currently permitted?\nQ2: Which approvals are required?\nQ3: What is the maximum permitted duration, in days?\nQ4: Does the 2025 exception change the answer?\nQ5: Which artifact controls if sources conflict?\n\nRespond with a single JSON object and nothing else. For each question give an object with two string fields: \"answer\" (the answer, or INSUFFICIENT) and \"basis\" (name or quote the specific provision or file among those provided that your answer relies on, or INSUFFICIENT). Use exactly these keys:\n{\n  \"Q1\": {\n    \"answer\": \"<answer or INSUFFICIENT>\",\n    \"basis\": \"<provision or file relied on, or INSUFFICIENT>\"\n  },\n  \"Q2\": {\n    \"answer\": \"<answer or INSUFFICIENT>\",\n    \"basis\": \"<provision or file relied on, or INSUFFICIENT>\"\n  },\n  \"Q3\": {\n    \"answer\": \"<answer or INSUFFICIENT>\",\n    \"basis\": \"<provision or file relied on, or INSUFFICIENT>\"\n  },\n  \"Q4\": {\n    \"answer\": \"<answer or INSUFFICIENT>\",\n    \"basis\": \"<provision or file relied on, or INSUFFICIENT>\"\n  },\n  \"Q5\": {\n    \"answer\": \"<answer or INSUFFICIENT>\",\n    \"basis\": \"<provision or file relied on, or INSUFFICIENT>\"\n  }\n}\n"
+const QCELL = { type: 'object', properties: { answer: { type: 'string' }, basis: { type: 'string' } }, required: ['answer', 'basis'], additionalProperties: false }
+const SCHEMA = { type: 'object', properties: { Q1: QCELL, Q2: QCELL, Q3: QCELL, Q4: QCELL, Q5: QCELL }, required: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5'], additionalProperties: false }
+let n_done = 0
+for (let b = 0; b < N; b += BATCH) {
+  const res = await parallel(Array.from({ length: Math.min(BATCH, N - b) }, (_, i) => () =>
+    agent(PROMPT, { label: 'W4#' + (b + i), phase: 'W4', schema: SCHEMA, model: 'haiku', effort: 'low' })))
+  n_done += res.filter(Boolean).length
+  log('batch ' + (b / BATCH + 1) + '/' + Math.ceil(N / BATCH) + ', ' + n_done + ' done')
+}
+return { n_requested: N, n_completed: n_done, note: 'raw answers in journal; reference graders v2+v3 are the grading of record' }
