@@ -93,14 +93,42 @@ memo itself), "the 2025 exception" has no referent in the window — the
 decoder cannot know whether v4's generic supersession clause covers it. The
 manifest's contribution is not authority (v4's own text carries that) but
 *reference*: it tells the decoder what exists to be superseded. This is a
-sufficiency result invisible at n=1 and invisible to binary grading.
+sufficiency result invisible at n=1 and invisible to binary grading — and
+the certification run showed it is *decoder-relative*: fable needs no such
+referent (finding 6), haiku does.
 
-### 6. Certification (fable, POWERED-V2)
+### 6. Certification (fable, POWERED-V2): **W3 at 871 bytes**
 
-<!-- CERTIFICATION RESULT: filled from the POWERED-V2 run record -->
-*Pending: ordered W4→W0 at n=150/rung, probes_v3 strict, Bonferroni L=5,
-RELIABLE iff k≤18, UNRELIABLE iff k≥25. See
-`results/task04_powered_v2/` for the certificate.*
+Ordered W4→W0, n=150/rung, probes_v3 strict grading, Bonferroni L=5
+(RELIABLE iff k≤18, UNRELIABLE iff k≥25), with exact verdict-preserving
+curtailment. Certificate `f69b038561c7ba70`:
+
+| rung | n effective | failures | verdict |
+|---|---|---|---|
+| W4 (541 B) | 30 of 150 | 30 | UNRELIABLE (curtailed: k≥25 already) |
+| W3 (871 B) | 135 of 150 | **0** | **RELIABLE** (curtailed: k_final ≤ 15 ≤ 18) — selected |
+
+W2/W1/W0 were not measured (declared truncation). Exact per-rung bounds at
+the certified rung: false-certification ≤ 0.0069, false-rejection ≤ 0.169.
+The in-flight grading was reproduced exactly by the reference grader over
+the journal (W4 30/30, W3 0/135) — the preregistered cross-check passed.
+Fable's W4 Q4 wrong-basis signature reached 30/30 at low reasoning effort.
+Curtailment spent 165 instances where naive execution would have spent 750,
+with identical verdicts.
+
+The certified claim, precisely: for *this* decoder identity
+(claude-fable-5, low effort), the 871-byte current-rules window suffices —
+run-failure probability ≤ 0.10 at the protocol's operating
+characteristics — and the 541-byte stale-only window is rejected. The
+contract travels with the certificate: no promise inside the indifference
+region (0.10, 0.20), and "certified" is meaningless without it.
+
+**Sufficiency is decoder-relative.** Fable certified W3 with zero failures
+— including zero Q4 abstentions — while haiku abstained on Q4 at W3
+(3/26): fable resolves "the 2025 exception" from v4's generic supersession
+clause alone; haiku needs the manifest's referent. Whether version
+metadata is load-bearing is a property of the (window, decoder) pair, not
+of the window.
 
 ## Method notes
 

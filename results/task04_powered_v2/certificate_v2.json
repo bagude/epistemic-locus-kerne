@@ -1,0 +1,75 @@
+{
+  "certificate_hash": "f69b038561c7ba702307bc2a3c0c2f4301f4b0b5dc9f67b1d4cf29a034a88a97",
+  "certification_target": "p <= 0.10",
+  "cross_check": "reference grader over journal reproduced in-flight counts exactly (W4 30/30, W3 0/135); run valid",
+  "experiment_id": "CET0-REALTASK-004-POWERED-V2",
+  "familywise_error_budget": 0.05,
+  "indifference_region": [
+    0.1,
+    0.2
+  ],
+  "limitations": [
+    "no promise inside the indifference region",
+    "decoder-relative: scoped to claude-fable-5 at low reasoning effort; merges with no other identity, including this model at other effort settings",
+    "descriptive ladder truncated above the selected rung by design",
+    "basis grading remains a token-level proxy for cited grounding",
+    "a RELIABLE verdict means the count fell in the preregistered acceptance region, not P(p<=alpha_good|data)"
+  ],
+  "model_identity": {
+    "interface": "fresh rung-blind workflow subagent per instance, byte-identical Smoke-v1 wrapper, schema-enforced structured output",
+    "name": "claude-fable-5",
+    "provider": "anthropic",
+    "reasoning_effort": "low",
+    "sealing": "A_DECODER_SEALED: ASSUMED_UNVERIFIED",
+    "tokenizer_if_used": null,
+    "version_or_snapshot": "session-configured claude-fable-5 (workflow model inherit)"
+  },
+  "no_promise_inside_indifference_region": true,
+  "pack_hash": "fd266ee246d839e6e328332e755c1531dd4e0a8796315db79c76bb1774579d68",
+  "probes_v3_hash": "760fac06120306b9cc0b565fbbd2185de7b6b293edf591bb3c750b10800a411b",
+  "protocol_hash": "af7889739375179a18f22d72eed5317dc3f0c6933e9d9d4e1d423f7dfe7a62a2",
+  "rejection_target": "p >= 0.20",
+  "rungs": [
+    {
+      "abstention_only_runs": 0,
+      "confident_failure_runs": 30,
+      "curtailed": true,
+      "curtailment_argument": "k=30 >= 25 already; UNRELIABLE under every completion of the rung",
+      "failures": 30,
+      "n_effective": 30,
+      "n_planned": 150,
+      "q4_correct_outcome_wrong_basis": "30/30",
+      "rate_bytes": 541,
+      "verdict": "UNRELIABLE",
+      "window_id": "W4"
+    },
+    {
+      "abstention_only_runs": 0,
+      "confident_failure_runs": 0,
+      "curtailed": true,
+      "curtailment_argument": "k=0 with 15 remaining; k_final <= 15 <= 18; RELIABLE under every completion of the rung",
+      "exact_false_cert_bound": 0.00689,
+      "exact_false_reject_bound": 0.16916,
+      "failures": 0,
+      "n_effective": 135,
+      "n_planned": 150,
+      "rate_bytes": 871,
+      "verdict": "RELIABLE",
+      "window_id": "W3"
+    }
+  ],
+  "rungs_not_measured": [
+    "W2",
+    "W1",
+    "W0"
+  ],
+  "selection": {
+    "selected_rate_bytes": 871,
+    "selected_window_hash": "bb546a3323f40a9660d403d53f3d2b7663c0acbf7027ac7f03c84ec796b24ef2",
+    "selected_window_id": "W3",
+    "verdict": "CERTIFIED"
+  },
+  "substrate_hash": "c871cc8e2994639c144aa0a31b91dfb08c44778d3f6f0ae14fcfcceb0e47452a",
+  "truncation": "declared in protocol: decision arm stops at first RELIABLE; non-monotonicity above W3 is unobservable in this family",
+  "workflow_run_id": "wf_6ddbe291-23c"
+}
