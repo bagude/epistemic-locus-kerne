@@ -1,0 +1,56 @@
+{
+  "decoder": "claude-haiku-4-5, low effort",
+  "finding": "the asymmetry is now WITHIN-decoder: stale-only windows produce confident wrong-world reconstruction (1.0, CI lower 0.91) with zero abstention-only runs, while metadata-poor current windows produce abstention (3/26) with zero confident failures. The failure mode flips sign across the ladder for one decoder identity; the decoder confound is closed.",
+  "haiku_ladder_complete_v3": {
+    "W0": {
+      "abstention_only": 0,
+      "confident_fail": 0,
+      "n": 26
+    },
+    "W1": {
+      "abstention_only": 0,
+      "confident_fail": 1,
+      "n": 26
+    },
+    "W2": {
+      "abstention_only": 0,
+      "confident_fail": 0,
+      "n": 26
+    },
+    "W3": {
+      "abstention_only": 3,
+      "confident_fail": 0,
+      "n": 26
+    },
+    "W4": {
+      "abstention_only": 0,
+      "confident_fail": 40,
+      "n": 40
+    }
+  },
+  "protocol_hash": "589724b877e8519b97ecb37fcb638637f5bd09fba129859c1a5cbe76e0bb2b0e",
+  "status": "COMPLETE 40/40",
+  "summary_hash": "2e26f610ee23fd36fd9b98a0d1190721566357c779476d768b5bda7b214455c3",
+  "texture_note": "haiku's W4 failure texture differs from fable's archived partial: haiku abstains far less (Q5 only, 6/40, vs fable's 77/77 on Q5 and ~28% on Q1-Q3) and mostly gets Q4's outcome outright wrong (37/40) where fable produced the correct-outcome-wrong-basis signature (71/77). The failure MODE is shared; its texture is model-dependent.",
+  "v2_grading": {
+    "run_failures": "40/40"
+  },
+  "v3_grading": {
+    "abstained_by_probe": {
+      "Q5": 6
+    },
+    "abstention_only_runs": "0/40, CI [0.0, 0.088]",
+    "confident_fails_by_probe": {
+      "Q1": 40,
+      "Q2": 40,
+      "Q3": 40,
+      "Q4": 40,
+      "Q5": 34
+    },
+    "confident_failure_runs": "40/40, CI [0.912, 1.0]",
+    "decision_failures": "40/40, CI [0.912, 1.0]",
+    "full_abstention": "0/40",
+    "q4_correct_outcome_wrong_basis": "3/40"
+  },
+  "workflow_run_id": "wf_76864424-aca"
+}
