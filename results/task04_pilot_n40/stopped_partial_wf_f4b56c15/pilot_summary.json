@@ -1,0 +1,103 @@
+{
+  "decoder": "claude-haiku-4-5, low reasoning effort (per protocol)",
+  "grading_note": "workflow killed before returning in-flight grades; the preregistered reference grader (grade_task04_v2.py) applied to the raw journal is the grading of record",
+  "instrument_finding": {
+    "claim": "17 of 20 run failures are Q5 'names-artifact-not-filename': the decoder identified the correct authority (Policy v4 / current policy) but not the literal string policy_v4.md required by the preregistered substring rule; 3 are W3 Q4 INSUFFICIENT abstentions; 1 is a genuine basis failure (W1, cited the manifest without v4 grounding)",
+    "failure_kind_counts": {
+      "W0": {
+        "Q5:names-artifact-not-filename": 4
+      },
+      "W1": {
+        "Q5:basis-fail": 1,
+        "Q5:names-artifact-not-filename": 4
+      },
+      "W2": {
+        "Q5:names-artifact-not-filename": 2
+      },
+      "W3": {
+        "Q4:insufficient": 3,
+        "Q5:names-artifact-not-filename": 7
+      }
+    }
+  },
+  "preregistered_analysis": {
+    "comparisons": {
+      "contamination_W0_vs_W2": 0.668,
+      "contamination_W1_vs_W2": 0.4189,
+      "sufficiency_W3_vs_W2": 0.0385
+    },
+    "stats": {
+      "W0": {
+        "ci95": [
+          0.044,
+          0.349
+        ],
+        "failed_probe_counts": {
+          "Q5": 4
+        },
+        "failures": 4,
+        "n": 26,
+        "rate": 0.154
+      },
+      "W1": {
+        "ci95": [
+          0.066,
+          0.394
+        ],
+        "failed_probe_counts": {
+          "Q5": 5
+        },
+        "failures": 5,
+        "n": 26,
+        "rate": 0.192
+      },
+      "W2": {
+        "ci95": [
+          0.009,
+          0.251
+        ],
+        "failed_probe_counts": {
+          "Q5": 2
+        },
+        "failures": 2,
+        "n": 26,
+        "rate": 0.077
+      },
+      "W3": {
+        "ci95": [
+          0.172,
+          0.557
+        ],
+        "failed_probe_counts": {
+          "Q4": 3,
+          "Q5": 7
+        },
+        "failures": 9,
+        "n": 26,
+        "rate": 0.346
+      }
+    }
+  },
+  "protocol_hash": "f59e15826bcc7cd78ca069f6c72e83635e147d0ffe306e4c283e25edb60ace2c",
+  "sensitivity_reanalysis_post_hoc_descriptive_only": {
+    "failures": {
+      "W0": "0/26",
+      "W1": "1/26",
+      "W2": "0/26",
+      "W3": "3/26 (all Q4 INSUFFICIENT)"
+    },
+    "reading": [
+      "sufficiency: the manifest's real contribution is referential, not authoritative -- W3 abstains on Q4 because without the manifest (or the memo itself) 'the 2025 exception' has no referent; defensible behavior, graded as failure by design",
+      "contamination: no detectable effect in this decoder at this n -- coherent stale evidence alongside current authority did not degrade reconstruction (1/26 vs 0/26)",
+      "direction inversion vs W4: metadata-poor-but-current windows induce under-claiming (abstention); stale-only windows induced over-claiming (confident wrong world, 77/77 fable). The failure mode flips sign across the ladder."
+    ],
+    "rule_change": "accept title-level naming of the artifact for Q5 outcome (NOT preregistered; a candidate rule for the next family, never a revision of this one)"
+  },
+  "sizing_guidance_for_confirmatory_run": [
+    "under preregistered grading, W1 vs W2 (0.19 vs 0.08) needs ~150/rung for 80% power -- but that gap is mostly the Q5 naming artifact",
+    "fix Q5 normalization (and reconsider whether Q4-abstention-in-W3 should count as failure or as a separate abstention outcome) in a new family BEFORE sizing; otherwise the run measures filename convention"
+  ],
+  "status": "STOPPED_BY_USER at 104/160 instances; round-robin batching left balanced rungs (26 per rung)",
+  "summary_hash": "d0d9fb23126ccfb0f35181b98376409c63f97b7d4e084687e0f24bb4455df8be",
+  "workflow_run_id": "wf_f4b56c15-ef8"
+}
